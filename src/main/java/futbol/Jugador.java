@@ -3,6 +3,11 @@ package futbol;
 public class Jugador extends Futbolista {
     public short golesMarcados;
     public byte dorsal;
+    
+    public Jugador() {
+    	this.golesMarcados= 289;
+    	this.dorsal= 7;
+    }
 
     public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal) {
         super(nombre, edad, posicion); 
@@ -10,28 +15,7 @@ public class Jugador extends Futbolista {
         this.dorsal = dorsal;
     }
 
-    public short getGolesMarcados() {
-		return golesMarcados;
-	}
-
-	public void setGolesMarcados(short golesMarcados) {
-		this.golesMarcados = golesMarcados;
-	}
-
-	public byte getDorsal() {
-		return dorsal;
-	}
-
-	public void setDorsal(byte dorsal) {
-		this.dorsal = dorsal;
-	}
-
-	public Jugador() {
-        super("Maradona", 30, "delantero");
-        this.golesMarcados = 289;
-        this.dorsal = 7;
-    }
-
+   
    
     @Override
     public String toString() {
@@ -48,7 +32,25 @@ public class Jugador extends Futbolista {
     
     @Override
     public int compareTo(Futbolista f) {
-        return Math.abs(this.getEdad() - f.getEdad());
+    	Jugador jugador=(Jugador) f;
+        return Math.abs(this.getEdad() - jugador.getEdad());
     }
+    
+    public short getGolesMarcados() {
+		return golesMarcados;
+	}
+
+	public void setGolesMarcados(short golesMarcados) {
+		this.golesMarcados = golesMarcados;
+	}
+
+	public byte getDorsal() {
+		return dorsal;
+	}
+
+	public void setDorsal(byte dorsal) {
+		this.dorsal = dorsal;
+	}
+
 }
 
