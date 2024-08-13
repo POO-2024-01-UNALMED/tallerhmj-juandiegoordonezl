@@ -18,9 +18,9 @@ package futbol;
 	    }
 
 	    @Override
-	    public String toString() {
-	        return "El futbolista " + nombre + " tiene " + edad + " y juega de " + posicion;
-	    }
+		public String toString() {
+			return "El futbolista " +nombre+ " tiene " +edad+ ", y juega de " +posicion;
+		}
 
 	    public boolean equals(Futbolista f) {
 	        return this==f;
